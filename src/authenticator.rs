@@ -88,9 +88,9 @@ impl Authenticator {
     }
 
     // Get CLI input.
-    let username = Input::new("GitHub username").interact()?;
-    let password = PasswordInput::new("GitHub password").interact()?;
-    let otp = Input::new("GitHub OTP (optional)").interact()?;
+    let username: String = Input::new().with_prompt("GitHub username").interact()?;
+    let password: String = PasswordInput::new().with_prompt("GitHub password").interact()?;
+    let otp: String = Input::new().with_prompt("GitHub OTP (optional)").interact()?;
 
     // Create HTTP body
     let note = self.config.note.clone();
