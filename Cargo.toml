@@ -11,7 +11,7 @@ readme = "README.md"
 
 [dependencies]
 dialoguer = "0.1.0"
-directories = "1.0.2"
+directories = "2.0.2"
 failure = "0.1.2"
 mkdirp = "1.0.0"
 serde = "1.0.79"
