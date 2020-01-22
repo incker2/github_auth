@@ -3,7 +3,7 @@ use dialoguer::{Input, PasswordInput};
 use directories::ProjectDirs;
 use failure::Error;
 use mkdirp::mkdirp;
-use reqwest::Client;
+use reqwest::blocking::Client;
 use serde_json;
 
 use std::fs::{remove_file, File};
@@ -98,7 +98,7 @@ impl Authenticator {
     let body = AuthRequest::new(note, scopes);
 
     // Perform HTTP request.
-    let mut res = Client::new()
+    let res = Client::new()
       .post(::GITHUB_AUTH_URL)
       .header("X-GitHub-OTP", otp)
       .header("User-Agent", "github_auth")
