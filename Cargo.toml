@@ -6,6 +6,7 @@ repository = "https://github.com/yoshuawuyts/github_auth"
 documentation = "https://docs.rs/github_auth"
 description = "Authenticate with GitHub from the command line."
 authors = ["Yoshua Wuyts <yoshuawuyts@gmail.com>"]
+edition = "2018"
 readme = "README.md"
 
 [dependencies]
